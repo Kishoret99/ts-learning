@@ -16,10 +16,15 @@ export class Client {
     }
 
     synchronise(): void {
-        let updatedStore = this.server.getData(this.store.timestamp);
+        let updatedStore = this.server.synchronise(this.store);
         if (updatedStore) {
             this.store = updatedStore;
         }
+    }
+
+    update(data: string): void {
+        this.store.data = data;
+        this.store.timestamp = Date.now();
     }
     
 }

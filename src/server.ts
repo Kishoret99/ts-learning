@@ -4,11 +4,13 @@ export class Server {
         data: '',
     }
 
-    getData(clientTimestamp: number): DataStore {
-        if(clientTimestamp < this.store.timestamp) {
+    synchronise(clientDatastore: DataStore): DataStore {
+        if(clientDatastore.timestamp > this.store.timestamp) {
+            this.store = clientDatastore;
+            return undefined;
+        } else if(clientDatastore.timestamp < this.store.timestamp) {
             return this.store;
-        }
-        else {
+        } else {
             return undefined;
         }
 

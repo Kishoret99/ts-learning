@@ -1,10 +1,10 @@
 export class Server {
-    store: Datastore = {
+    store: DataStore = {
         timestamp: 0,
         data: '',
     }
 
-    getData(clientTimestamp: number): Datastore {
+    getData(clientTimestamp: number): DataStore {
         if(clientTimestamp < this.store.timestamp) {
             return this.store;
         }
@@ -16,7 +16,7 @@ export class Server {
 
 }
 
-export interface Datastore {
+export interface DataStore {
     timestamp: number;
     data: string;
 }

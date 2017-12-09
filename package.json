@@ -1,0 +1,20 @@
+{
+  "name": "ts-learning",
+  "version": "1.0.0",
+  "description": "Typescript design patterns",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "Typescript",
+    "Design",
+    "patterns"
+  ],
+  "author": "Kishore",
+  "license": "MIT",
+  "devDependencies": {
+    "chai": "^4.1.2",
+    "mocha": "^4.0.1"
+  }
+}

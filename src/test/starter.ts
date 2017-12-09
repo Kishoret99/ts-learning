@@ -1,3 +1,8 @@
+import {
+    Server,
+    Client
+} from '../';
+
 describe('some feature', () => {
     it('should pass', () => {
         'foo'.should.not.equal('bar');

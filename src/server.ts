@@ -13,12 +13,10 @@ export class Server {
         } else {
             return undefined;
         }
-
     }
-
 }
 
-export interface DataStore {
+interface DataStore {
     timestamp: number;
     data: string;
 }

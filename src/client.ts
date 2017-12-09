@@ -1,7 +1,9 @@
-import {
-    Server,
-    DataStore
-} from './server';
+import { Server } from './server';
+
+interface DataStore {
+    timestamp: number;
+    data: string;
+}
 
 export class Client {
     store: DataStore = {
